@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { useEffect, useState } from 'react';
+import SingleNews from './components/SingleNews';
+import {Outlet} from 'react-router-dom'
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Helmet from 'react-helmet'
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" flex flex-col justify-between min-h-screen">
+    <div>
+    <Navbar />
+    <Outlet />
+    </div>
+    <Footer />
     </div>
   );
 }
 
 export default App;
+

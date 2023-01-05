@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { routes } from './routes/routes';
+import {RouterProvider} from 'react-router-dom'
+import Helmet from 'react-helmet';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className='min-h-screen' data-theme='pastel'>
+    
+      <RouterProvider router={routes} />
+    </div>
   </React.StrictMode>
 );
 
